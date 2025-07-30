@@ -18,26 +18,27 @@ function setup() {
   createCanvas(400, 400);
   size = width / 2;
   isGrowing = false;
+  stepSize = 5;
 
-  slider = createSlider(0, 10, 5, 1);
-  slider.position(width + 25, 5);
-  slider.size(100);
+  // slider = createSlider(0, 10, 5, 1);
+  // slider.position(windowWidth / 2, 100);
+  // slider.size(100);
 
-  perlinButton = createButton('perlin noise');
-  perlinButton.position(windowWidth / 2 - 200, 0);
-  perlinButton.mousePressed(() => (changeType = changeTypes.perlin));
+  // perlinButton = createButton('perlin noise');
+  // perlinButton.position(windowWidth / 2 - 200, 0);
+  // perlinButton.mousePressed(() => (changeType = changeTypes.perlin));
 
-  randomButton = createButton('random values');
-  randomButton.position(windowWidth / 2 - 100, 0);
-  randomButton.mousePressed(() => (changeType = changeTypes.random));
+  // randomButton = createButton('random values');
+  // randomButton.position(windowWidth / 2 - 100, 0);
+  // randomButton.mousePressed(() => (changeType = changeTypes.random));
 
-  regularButton = createButton('regular changes');
-  regularButton.position(windowWidth / 2 + 20, 0);
-  regularButton.mousePressed(() => (changeType = changeTypes.regular));
+  // regularButton = createButton('regular changes');
+  // regularButton.position(windowWidth / 2 + 20, 0);
+  // regularButton.mousePressed(() => (changeType = changeTypes.regular));
 
-  changeType = changeTypes.random;
+  changeType = changeTypes.perlin;
 
-  stepSize = slider.value();
+  // stepSize = slider.value();
 
   time = random(0, 10000);
 
@@ -50,7 +51,7 @@ function draw() {
 }
 
 let drawCircles = () => {
-  stepSize = slider.value();
+  // stepSize = slider.value();
 
   switch (changeType) {
     case changeTypes.perlin:
