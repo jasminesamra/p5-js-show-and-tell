@@ -1,27 +1,21 @@
-let circleSize, time, stepSize;
+var speed = 100;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-  circleSize = width / 4;
-  time = random(0, 1000);
-  stepSize = 10;
+  createCanvas(400, 400);
+
+  centerX = width / 2;
+  centerY = width / 2;
+
+  background(200);
 }
 
 function draw() {
-  background('#aaaaaa');
+  background(220);
+  fill('red');
 
-  fill('#fdbde0ff');
+  circle(200, 200, 300);
+  fill('white');
 
-  stroke('#affe90ff');
-
-  strokeWeight(5);
-
-  let x = 300;
-  let y = height / 2;
-
-  let unmappedSize = noise(time);
-  let size = map(unmappedSize, 0, 1, 0, width / 4);
-  time += 0.001 * stepSize;
-
-  circle(x, y, size);
+  circle(speed, 200, 10, 10);
+  speed++;
 }
