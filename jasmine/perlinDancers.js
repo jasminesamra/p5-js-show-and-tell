@@ -12,7 +12,7 @@ function setup() {
   numCircles = numCirclesSlider.value();
   prevNumCircles = numCircles;
 
-  stepSizeSlider = createSlider(1, 20, 2, 1);
+  stepSizeSlider = createSlider(1, 20, 5, 1);
   stepSizeSlider.position(10, 60);
   stepSizeSlider.size(width / 4);
 
