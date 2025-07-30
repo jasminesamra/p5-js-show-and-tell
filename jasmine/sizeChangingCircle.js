@@ -23,16 +23,16 @@ function setup() {
   slider.position(width + 25, 5);
   slider.size(100);
 
-  perlinButton = createButton('use perlin noise');
-  perlinButton.position(width + 25, 50);
+  perlinButton = createButton('perlin noise');
+  perlinButton.position(windowWidth / 2 - 200, 0);
   perlinButton.mousePressed(() => (changeType = changeTypes.perlin));
 
-  randomButton = createButton('use random values');
-  randomButton.position(width + 25, 100);
+  randomButton = createButton('random values');
+  randomButton.position(windowWidth / 2 - 100, 0);
   randomButton.mousePressed(() => (changeType = changeTypes.random));
 
-  regularButton = createButton('use regular changes');
-  regularButton.position(width + 25, 150);
+  regularButton = createButton('regular changes');
+  regularButton.position(windowWidth / 2 + 20, 0);
   regularButton.mousePressed(() => (changeType = changeTypes.regular));
 
   changeType = changeTypes.random;

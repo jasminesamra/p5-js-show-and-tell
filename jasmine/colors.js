@@ -25,16 +25,16 @@ function setup() {
 
   stepSize = 10;
 
-  perlinButton = createButton('use perlin noise');
-  perlinButton.position(windowWidth / 2 - 200, 50);
+  perlinButton = createButton('perlin noise');
+  perlinButton.position(windowWidth / 2 - 200, 0);
   perlinButton.mousePressed(() => (changeType = changeTypes.perlin));
 
-  randomButton = createButton('use random value change');
-  randomButton.position(windowWidth / 2 - 200, 100);
+  randomButton = createButton('random change');
+  randomButton.position(windowWidth / 2 - 100, 0);
   randomButton.mousePressed(() => (changeType = changeTypes.random));
 
   rollTheDiceButton = createButton('roll the dice');
-  rollTheDiceButton.position(windowWidth / 2 - 200, 150);
+  rollTheDiceButton.position(windowWidth / 2 + 20, 0);
   rollTheDiceButton.mousePressed(() => (changeType = changeTypes.rollTheDice));
 }
 
