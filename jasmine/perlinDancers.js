@@ -3,7 +3,8 @@ let numCircles, prevNumCircles, numCirclesSlider;
 let stepSize, prevStepSize, stepSizeSlider;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  let canvas = createCanvas(windowWidth, windowHeight);
+  canvas.style('display', 'block');
 
   numCirclesSlider = createSlider(1, 100, 2, 1);
   numCirclesSlider.position(10, 10);
@@ -27,18 +28,18 @@ function draw() {
   numCircles = numCirclesSlider.value();
   if (numCircles != prevNumCircles) {
     prevNumCircles = numCircles;
-    background("#ffffff");
+    background('#ffffff');
     circles = [];
     populateCircles();
     printValues();
   }
 
   stepSize = stepSizeSlider.value();
-    if (stepSize != prevStepSize) {
-      prevStepSize = stepSize;
-      background('#ffffff');
-      printValues();
-    }
+  if (stepSize != prevStepSize) {
+    prevStepSize = stepSize;
+    background('#ffffff');
+    printValues();
+  }
 
   // for each circle in array circles, update coordinates and draw
   circles.map(moveAndDrawCircle);
@@ -68,6 +69,6 @@ const populateCircles = () => {
 };
 
 const printValues = () => {
-text(`dancers: ${numCircles}`, 20, 35);
-text(`step size: ${stepSize}`, 20, 85);
-}
+  text(`dancers: ${numCircles}`, 20, 35);
+  text(`step size: ${stepSize}`, 20, 85);
+};
